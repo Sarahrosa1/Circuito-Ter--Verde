@@ -20,7 +20,7 @@ tereverde.db
 *.bak
 *.swp
 
-# Pastas de upload (se você tiver imagens locais)
+# Pastas de upload 
 static/parks/
 static/trails/
 
