@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.env
+.vscode/
+
+# Banco de dados SQLite
+tereverde.db
+*.sqlite3
+*.db
+
+# Arquivos de log e temporários
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Pastas de upload (se você tiver imagens locais)
+static/parks/
+static/trails/
+
+# Outros
+.DS_Store
