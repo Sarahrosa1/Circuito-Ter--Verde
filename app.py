@@ -70,7 +70,6 @@ def init_db():
 with app.app_context():
     init_db()
 
-# --- Decoradores e Contexto do Usuário ---
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
@@ -107,7 +106,6 @@ def load_logged_in_user():
 def inject_user():
     return dict(current_user=g.user)
 
-# --- Rotas Públicas ---
 @app.route('/')
 def index():
     conn = get_db_connection()
@@ -128,7 +126,6 @@ def park_detail(park_id):
         return redirect(url_for('index'))
     return render_template('park_detail.html', park=park, trails=trails, events=events)
 
-# --- Rotas de Autenticação ---
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if g.user:
@@ -197,7 +194,6 @@ def register():
         return redirect(url_for('login'))
     return render_template('cadastro.html')
 
-# --- Rotas Administrativas ---
 @app.route('/admin')
 @admin_required
 def admin_dashboard():
